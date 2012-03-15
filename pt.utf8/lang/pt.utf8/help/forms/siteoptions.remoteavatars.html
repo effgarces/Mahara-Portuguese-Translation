@@ -1,0 +1,15 @@
+<h3>Exibir avatares remotos<h3>
+
+<p>Se esta opção estiver activada, o <a href="http://www.gravatar.com">Gravatar</a> serviço online será utilizado para exibir os ícones dos perfis dos utilizadores . Isto permite aos utilizadores definir qual é o seu ícone do perfil no site Gravatar e assim não precisam de definir um em cada sistema Mahara ou em cada serviço online. (Se o Gravatar não tem um ícone para um determinado utilizador, então o próprio Mahara irá definir e exibir um ícone por omissão).</p>
+
+<h4>Razões para desactivá-lo</h4>
+
+<p>Esta opção deverá ser desactivada das instalações quando os <b>utilizadores não têm acesso à internet </b>. Caso utilize o Gravatar nestas condições apenas irá proporcionar mais atrasos no sistema.</p>
+
+<p>Além disso, os <b>sites feitos por https</b>, farão com que os ícones do perfil do Gravatar emitam avisos de segurança em alguns navegadores. Isto é devido ao facto das imagens do Gravatar, são enviadas através de http normal não criptografado.</p>
+
+<h4>Servidor de avatares comuns</h4>
+
+<p>Caso tenha um servidor de avatares comuns, o qual é compatível com o protocolo do Gravatar, irá ter que especificar um URL base no ficheiro config.php:</p>
+
+<p><code>$cfg->remoteavatarbaseurl = 'http://example.com/avatar/';</code></p>

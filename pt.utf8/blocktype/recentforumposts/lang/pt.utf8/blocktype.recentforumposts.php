@@ -1,40 +1,12 @@
 <?php
-/**
- * Mahara: Electronic portefólio, weblog, resume builder and social networking
- * Copyright (C) 2009 Nigel McNie (http://nigel.mcnie.name/)
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * @package    mahara
- * @subpackage pt.utf8
- * @author     Direcção de Serviços de Tecnologias Educativas
- * @author     Emanuel Garcês & Rosa Silva
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2009 Nigel McNie http://nigel.mcnie.name/
- *
- */
 
 defined('INTERNAL') || die();
 
-$string['title'] = 'Tópicos Recentes no Fórum';
+$string['defaulttitledescription'] = 'Um título por omissão será gerado se deixar o campo título vazio';
 $string['description'] = 'Mostra os tópicos recentes no fórum do grupo';
-
 $string['group'] = 'Grupo';
 $string['nogroupstochoosefrom'] = 'Desculpe, não existem grupos para escolher';
 $string['poststoshow'] = 'Número máximo de tópicos a exibir';
 $string['poststoshowdescription'] = 'Entre 1 e 100';
-$string['recentforumpostsforgroup'] = "Tópicos Recentes no Fórum do Grupo %s";
-$string['defaulttitledescription'] = 'Um título por omissão será gerado se deixar o campo título vazio';
-
-?>
+$string['recentforumpostsforgroup'] = 'Tópicos Recentes no Fórum do Grupo %s';
+$string['title'] = 'Tópicos Recentes no Fórum';

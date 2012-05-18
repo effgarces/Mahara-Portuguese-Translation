@@ -1,133 +1,95 @@
 <?php
-/**
- * Mahara: Electronic portefólio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * @package    mahara
- * @subpackage pt.utf8
- * @author     Direcção de Serviços de Tecnologias Educativas
- * @author     Emanuel Garcês & Rosa Silva
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
- *
- */
 
 defined('INTERNAL') || die();
-
-$string['pluginname'] = 'Perfil';
-
-$string['profile'] = 'Perfil';
-
-$string['mandatory'] = 'Obrigatório';
-$string['public'] = 'Público';
-
-$string['aboutdescription'] = 'Introduza o seu primeiro e último nome. Se desejar exibir um nome diferente para os utilizadores, defina esse nome no apelido.';
-$string['infoisprivate'] = 'Esta informação é privada até que decida incluí-la numa página que esteja a ser partilhada com outros utilizadores.';
-$string['viewmyprofile'] = 'Ver o meu perfil';
-
-// profile categories
-$string['aboutme'] = 'Geral';
-$string['contact'] = 'Informação de contacto';
-$string['messaging'] = 'Mensagens';
-$string['general'] = 'Ocupação';
-
-// profile fields
-$string['firstname'] = 'Primeiro Nome';
-$string['lastname'] = 'Último Nome';
-$string['fullname'] = 'Nome Completo';
-$string['institution'] = 'Instituição';
-$string['studentid'] = 'ID de Estudante';
-$string['preferredname'] = 'Cognome';
-$string['introduction'] = 'Introdução';
-$string['email'] = 'Endereço de Email';
-$string['maildisabled'] = 'Email Desactivado';
-$string['officialwebsite'] = 'Endereço do Site Oficial';
-$string['personalwebsite'] = 'Endereço do Site Pessoal';
-$string['blogaddress'] = 'Endereço do Blogue';
-$string['address'] = 'Endereço Postal';
-$string['town'] = 'Município';
-$string['city'] = 'Cidade';
-$string['country'] = 'País';
-$string['homenumber'] = 'Telefone de Casa';
-$string['businessnumber'] = 'Telefone do Trabalho';
-$string['mobilenumber'] = 'Telemóvel';
-$string['faxnumber'] = 'Número de Fax';
-$string['icqnumber'] = 'Número de ICQ';
-$string['msnnumber'] = 'ID do MSN';
-$string['aimscreenname'] = 'ID do AIM';
-$string['yahoochat'] = 'ID do Yahoo';
-$string['skypeusername'] = 'ID do Skype';
-$string['jabberusername'] = 'ID do Jabber';
-$string['occupation'] = 'Ocupação';
-$string['industry'] = 'Indústria';
-
-// Field names for view user and search user display
-$string['name'] = 'Nome';
-$string['principalemailaddress'] = 'Email primário';
-$string['emailaddress'] = 'Email alternativo';
-
-$string['saveprofile'] = 'Guardar Perfil';
-$string['profilesaved'] = 'Perfil salvo com sucesso';
-$string['profilefailedsaved'] = 'Ocorreu um erro ao guardar o perfil';
-
-
-$string['emailvalidation_subject'] = 'Validação de email';
-$string['emailvalidation_body'] = <<<EOF
-Olá %s,
-
-Adicionou o endereço de email %s á sua conta de utilizador no Mahara. Por favor visite a hiperligação abaixo para activar este endereço.
-
-%s
-
-Se este email pertence-lhe mais não efectuou um pedido para adicioná-lo á sua conta do Mahara, siga a seguinte hiperligação para recusar a activação do email.
-
-%s
-EOF;
-
-$string['validationemailwillbesent'] = 'um email de validação será enviado quando guardar o seu perfil';
-$string['validationemailsent'] = 'um email de validação foi enviado';
-$string['emailactivation'] = 'Email de Activação';
-$string['emailactivationsucceeded'] = 'Activação do email efectuada com sucesso';
-$string['emailalreadyactivated'] = 'Email já activado';
-$string['emailactivationfailed'] = 'Ocorreu um erro na activação do email';
-$string['emailactivationdeclined'] = 'Activação do email recusada com sucesso';
-$string['verificationlinkexpired'] = 'A hiperligação de verificação expirou';
-$string['invalidemailaddress'] = 'Endereço de email inválido';
-$string['unvalidatedemailalreadytaken'] = 'O endereço de email que está a tentar validar já está em utilização';
-$string['addbutton'] = 'Adicionar';
-
-$string['emailingfailed'] = 'Perfil salvo, mas os emails não foram enviados para: %s';
-
-$string['loseyourchanges'] = 'Ignorar as suas alterações?';
-
-$string['Title'] = 'Título';
 
 $string['Created'] = 'Criado';
 $string['Description'] = 'Descrição';
 $string['Download'] = 'Descarregar';
-$string['lastmodified'] = 'Última Modificação';
+$string['Note'] = 'Anotação';
+$string['Notes'] = 'Anotações';
 $string['Owner'] = 'Proprietário';
 $string['Preview'] = 'Pré-visualizar';
 $string['Size'] = 'Tamanho';
+$string['Title'] = 'Título';
 $string['Type'] = 'Tipo';
+$string['aboutdescription'] = 'Introduza o seu primeiro e último nome. Se desejar exibir um nome diferente para os utilizadores, defina esse nome no apelido.';
+$string['aboutme'] = 'Geral';
+$string['addbutton'] = 'Adicionar';
+$string['address'] = 'Endereço Postal';
+$string['aimscreenname'] = 'ID do AIM';
+$string['blogaddress'] = 'Endereço do Blogue';
+$string['businessnumber'] = 'Telefone do Trabalho';
+$string['city'] = 'Cidade';
+$string['confirmdeletenote'] = 'Esta nota é utilizada em %d blocos e %d páginas. Se o apagar, todos os blocos que contêm o texto aparecerão vazios.';
+$string['contact'] = 'Informação de contacto';
+$string['containedin'] = 'Incluído em:';
+$string['country'] = 'País';
+$string['editnote'] = 'Editar anotação';
+$string['email'] = 'Endereço de correiro electrónico';
+$string['emailactivation'] = 'Mensagem de correio eletrónico de ativação';
+$string['emailactivationdeclined'] = 'Ativação do correio eletrónico recusada com sucesso';
+$string['emailactivationfailed'] = 'Ocorreu um erro na ativação do correio eletrónico';
+$string['emailactivationsucceeded'] = 'Ativação do correio eletrónico efectuada com sucesso';
+$string['emailaddress'] = 'Correio eletrónico alternativo';
+$string['emailalreadyactivated'] = 'Correio eletrónico já ativado';
+$string['emailingfailed'] = 'Perfil salvo, mas as mensagens de correio eletrónico não foram enviadas para: %s';
+$string['emailvalidation_body1'] = 'Olá %s, 
 
+Adicionou o endereço de correio eletrónico %s à sua conta de utilizador em %s. Visite o link abaixo para ativar este endereço. 
+%s 
+
+Se este email lhe pertence, mas não pediu para adicioná-lo à sua conta %s, siga o link abaixo para recusar a ativação do email .
+ 
+%s';
+$string['emailvalidation_subject'] = 'Validação de correio eletrónico';
+$string['faxnumber'] = 'Número de Fax';
+$string['firstname'] = 'Primeiro Nome';
+$string['fullname'] = 'Nome Completo';
+$string['homenumber'] = 'Telefone de Casa';
+$string['icqnumber'] = 'Número de ICQ';
+$string['industry'] = 'Indústria';
+$string['infoisprivate'] = 'Esta informação é privada até que decida incluí-la numa página que esteja a ser partilhada com outros utilizadores.';
+$string['institution'] = 'Instituição';
+$string['introduction'] = 'Introdução';
+$string['invalidemailaddress'] = 'Endereço de correio eletrónico inválido';
+$string['jabberusername'] = 'ID do Jabber';
+$string['lastmodified'] = 'Última Modificação';
+$string['lastname'] = 'Último Nome';
+$string['loseyourchanges'] = 'Ignorar as suas alterações?';
+$string['maildisabled'] = 'Correio eletrónico Desactivado';
+$string['mandatoryfields'] = 'Campos obrigatórios';
+$string['mandatoryfieldsdescription'] = 'Os campos de perfil  que devem ser preenchidos';
+$string['messaging'] = 'Mensagens';
+$string['mobilenumber'] = 'Telemóvel';
+$string['msnnumber'] = 'ID do MSN';
+$string['mynotes'] = 'As minhas anotações';
+$string['name'] = 'Nome';
+$string['notedeleted'] = 'Anotação eliminada';
+$string['notesdescription'] = 'Estas são as notas html notas que criou dentro dos blocos de caixa de texto  nas suas páginas.';
+$string['notesfor'] = 'Anotações de %s';
+$string['noteupdated'] = 'Anotação atualizada';
+$string['occupation'] = 'Ocupação';
+$string['officialwebsite'] = 'Endereço do Site Oficial';
+$string['personalwebsite'] = 'Endereço do Site Pessoal';
+$string['pluginname'] = 'Perfil';
+$string['preferredname'] = 'Nome de Apresentação';
+$string['principalemailaddress'] = 'Correio eletrónico primário';
+$string['profile'] = 'Perfil';
+$string['profilefailedsaved'] = 'Ocorreu um erro ao guardar o perfil';
 $string['profileinformation'] = 'Informação do Perfil';
 $string['profilepage'] = 'Página do Perfil';
-$string['viewprofilepage'] = 'Ver a página do perfil';
+$string['profilesaved'] = 'Perfil salvo com sucesso';
+$string['saveprofile'] = 'Guardar Perfil';
+$string['searchablefields'] = 'Campos pesquisáveis';
+$string['searchablefieldsdescription'] = 'Campos de perfil que podem ser pesquisados por outros';
+$string['skypeusername'] = 'ID do Skype';
+$string['studentid'] = 'ID de Estudante';
+$string['town'] = 'Município';
+$string['unvalidatedemailalreadytaken'] = 'O endereço de correio eletrónico que está a tentar validar já está em utilização';
+$string['validationemailsent'] = 'Uma mensagem de correior eletrónico de validação foi enviada';
+$string['validationemailwillbesent'] = 'Uma mensagem correio eletrónico de validação será enviada quando guardar o seu perfil';
+$string['verificationlinkexpired'] = 'A hiperligação de verificação expirou';
 $string['viewallprofileinformation'] = 'Ver todas as informações do perfil';
-
-?>
+$string['viewmyprofile'] = 'Ver o meu perfil';
+$string['viewprofilepage'] = 'Ver a página do perfil';
+$string['yahoochat'] = 'ID do Yahoo';

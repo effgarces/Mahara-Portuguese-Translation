@@ -1,34 +1,10 @@
 <?php
-/**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * @package    mahara
- * @subpackage pt.utf8
- * @author     Direcção de Serviços de Tecnologias Educativas
- * @author     Emanuel Garcês & Rosa Silva
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
- *
- */
 
 defined('INTERNAL') || die();
 
-$string['parentlanguage'] = '';
+$string['locales'] = 'pt.utf8,pt_PT.utf8,pt,portuguese_portugal,portuguese';
+$string['strfdateofbirth'] = '%%d/%%m/%%Y';
+$string['strfdaymonthyearshort'] = '%%d/%%m/%%Y';
 $string['strftimedate'] = '%%e %%B %%Y';
 $string['strftimedateshort'] = '%%d %%B';
 $string['strftimedatetime'] = '%%d %%B %%Y, %%H:%%M %%p';
@@ -40,12 +16,15 @@ $string['strftimedaytime'] = '%%a, %%k:%%M';
 $string['strftimemonthyear'] = '%%B %%Y';
 $string['strftimerecent'] = '%%d %%b, %%k:%%M';
 $string['strftimerecentfull'] = '%%a, %%d %%b %%Y, %%H:%%M %%p';
+$string['strftimerecentyear'] = '%%d %%b %%Y, %%k:%%M';
 $string['strftimetime'] = '%%H:%%M %%p';
-$string['strfdaymonthyearshort'] = '%%d/%%m/%%Y';
-$string['strftimew3cdatetime'] = '%%Y-%%m-%%dT%%T%%z';
 $string['strftimew3cdate'] = '%%Y-%%m-%%d';
+$string['strftimew3cdatetime'] = '%%Y-%%m-%%dT%%T%%z';
 $string['thislanguage'] = 'Português (Portugal)';
-$string['locales'] = 'pt.utf8,pt_PT.utf8,pt,portuguese_portugal,portuguese';
 
-
-?>
+// Plural forms, added by language pack generator
+$string['pluralrule'] = 'n != 1';
+$string['pluralfunction'] = 'plural_pt_utf8';
+function plural_pt_utf8($n) {
+    return $n != 1;
+}

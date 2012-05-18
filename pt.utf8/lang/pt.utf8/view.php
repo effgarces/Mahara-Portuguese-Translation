@@ -1,333 +1,285 @@
 <?php
-/**
- * Mahara: Electronic portefólio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * @package    mahara
- * @subpackage pt.utf8
- * @author     Direcção de Serviços de Tecnologias Educativas
- * @author     Emanuel Garcês & Rosa Silva
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
- *
- */
 
 defined('INTERNAL') || die();
 
-$string['createview']             = 'Criar Página';
-$string['edittitle']              = 'Editar Titulo';
-$string['edittitleanddescription'] = 'Editar Titulo e Descrição';
-$string['editcontent']            = 'Editar Conteúdo';
-$string['editcontentandlayout']   = 'Editar Conteúdo e Estrutura';
-$string['editlayout']             = 'Editar Estrutura';
-$string['editaccess']             = 'Editar Acesso';
-$string['next']                   = 'Seguinte';
-$string['back']                   = 'Voltar';
-$string['title']                  = 'Ver Titulo';
-$string['description']            = 'Ver Descrição';
-$string['startdate']              = 'Data/Hora de inicio de Acesso';
-$string['stopdate']               = 'Data/Hora de fim de Acesso';
-$string['accessdates']            = 'Data/Hora de Acesso';
-$string['newstopdatecannotbeinpast'] = 'A data de fim não pode ser no passado';
-$string['newstartdatemustbebeforestopdate'] = 'A data de inicio tem que ser antes da data de fim';
-$string['unrecogniseddateformat'] = 'Formato de data desconhecido';
-$string['allowcommentsonview']    = 'Se seleccionado, os utilizadores serão autorizados a deixar comentários.';
-$string['ownerformat']            = 'Formato de visualização do nome';
-$string['ownerformatdescription'] = 'Como deseja que as pessoas que visualizem a sua Página vejam o seu nome?';
-$string['profileviewtitle']       = 'Visualização do Perfil';
-$string['dashboardviewtitle']  = 'Visualização do Painel';
-$string['grouphomepageviewtitle'] = 'Visualização da página de Grupo';
-
-// my views
-$string['artefacts'] = 'Artefactos';
-$string['groupviews'] = 'Páginas do Grupo';
-$string['institutionviews'] = 'Páginas da Instituição';
-$string['reallyaddaccesstoemptyview'] = 'A sua Página não contém blocos. Tem a certeza que deseja dar acesso á sua Página, a estes utilizadores?';
-$string['viewdeleted'] = 'Página eliminada';
-$string['viewsubmitted'] = 'Página submetida';
-$string['deletethisview'] = 'Eliminar esta Página';
-$string['submitthisviewto'] = 'Submeter esta Página para';
-$string['forassessment'] = 'para análise';
-$string['accessfromdate2'] = 'Mais ninguém pode ver esta Página antes de %s';
-$string['accessuntildate2'] = 'Mais ninguém pode ver depois de %s';
-$string['accessbetweendates2'] = 'Ninguém pode ver esta Página antes de %s ou depois de %s';
-$string['artefactsinthisview'] = 'Artefactos nesta Página';
-$string['whocanseethisview'] = 'Quem pode ver esta Página';
-$string['view'] = 'página';
-$string['views'] = 'páginas';
+$string['100'] = 'Larguras idênticas';
+$string['15,70,15'] = 'Coluna central enorme';
+$string['20,20,20,20,20'] = 'Larguras idênticas';
+$string['20,30,30,20'] = 'Colunas centrais maiores';
+$string['25,25,25,25'] = 'Larguras idênticas';
+$string['25,50,25'] = 'Coluna central maior';
+$string['33,33,33'] = 'Larguras idênticas';
+$string['33,67'] = 'Coluna direita maior';
+$string['50,50'] = 'Larguras idênticas';
+$string['67,33'] = 'Coluna esquerda maior';
+$string['Added'] = 'Adicionada(s)';
+$string['Browse'] = 'Consultar';
+$string['Configure'] = 'Configurar';
+$string['Locked'] = 'Bloqueado';
+$string['Me'] = 'Eu';
+$string['Owner'] = 'Proprietário';
+$string['Preview'] = 'Pré-visualizar';
+$string['Search'] = 'Pesquisar';
+$string['Submitted'] = 'Submetida';
+$string['Template'] = 'Modelo';
+$string['Untitled'] = 'Sem título';
 $string['View'] = 'Página';
 $string['Views'] = 'Páginas';
-$string['viewsubmittedtogroup'] = 'Esta Página foi submetida para <a href="%s">%s</a>';
-$string['viewsubmittedtogroupon'] = 'Esta Página foi submetida para <a href="%s">%s</a> em %s';
-$string['nobodycanseethisview2'] = 'Apenas você pode ver esta Página';
-$string['noviews'] = 'Sem Páginas.';
-$string['youhavenoviews'] = 'Você não tem Páginas.';
-$string['youhaventcreatedanyviewsyet'] = "Ainda não tem páginas.";
-$string['youhaveoneview'] = 'Você tem 1 Página.';
-$string['youhaveviews']   = 'Você tem %s Páginas.';
-$string['viewsownedbygroup'] = 'Páginas pertencentes a este grupo';
-$string['viewssharedtogroup'] = 'Páginas partilhadas com este grupo';
-$string['viewssharedtogroupbyothers'] = 'Páginas partilhadas com este grupo por outros utilizadores';
-$string['viewssubmittedtogroup'] = 'Páginas submetidas para este grupo';
-$string['submitaviewtogroup'] = 'Submeter uma Página para este grupo';
-$string['youhavesubmitted'] = 'Você submeteu <a href="%s">%s</a> para este grupo';
-$string['youhavesubmittedon'] = 'Você submeteu <a href="%s">%s</a> para este grupo em %s';
-
-// access levels
-$string['public'] = 'Público';
-$string['loggedin'] = 'Utilizadores autenticados';
-$string['friends'] = 'Amigos';
-$string['groups'] = 'Grupos';
-$string['users'] = 'Utilizadores';
-$string['tutors'] = 'tutores';
-$string['everyoneingroup'] = 'Todos no Grupo';
-
-// secret url
-$string['token'] = 'Endereço Secreto';
-$string['editsecreturlaccess'] = 'Editar acesso ao endereço secreto';
-$string['newsecreturl'] = 'Novo endereço secreto';
-$string['reallydeletesecreturl'] = 'Tem a certeza que deseja eliminar este endereço?';
-$string['secreturldeleted'] = 'O seu endereço secreto foi eliminado.';
-$string['secreturlupdated'] = 'Endereço secreto actualizado';
-$string['generatesecreturl'] = 'Gerado um novo endereço secreto para %s';
-$string['secreturls'] = 'Endereços secretos';
-
-// view user
-$string['inviteusertojoingroup'] = 'Convidar este utilizador para se juntar ao grupo';
-$string['addusertogroup'] = 'Adicionar este utilizador ao grupo';
-
-// view view
-$string['addedtowatchlist'] = 'Esta Página foi adicionada á lista de monitorização';
-$string['attachment'] = 'Anexo';
-$string['removedfromwatchlist'] = 'Esta Página foi removida da lista de monitorização';
-$string['addtowatchlist'] = 'Adicionar Página á lista de monitorização';
-$string['removefromwatchlist'] = 'Remover Página da lista de monitorização';
-$string['alreadyinwatchlist'] = 'Esta Página já está na lista de monitorização';
-$string['attachedfileaddedtofolder'] = "O ficheiro em anexo %s foi adicionado á pasta '%s'.";
-$string['complaint'] = 'Reclamação';
-$string['date'] = 'Data';
-$string['notifysiteadministrator'] = 'Notificar o administrador';
-$string['notifysiteadministratorconfirm'] = 'Tem a certeza que deseja notificar esta página como cotendo material objectável?';
-$string['print'] = 'Imprimir';
-$string['reportobjectionablematerial'] = 'Reportar material objectável';
-$string['reportsent'] = 'O seu relatório foi enviado';
-$string['viewobjectionableunmark'] = 'Esta Página, ou algo nela contido, foi reportado como tendo material objectável. Se já não é o caso, clique no botão para remover este aviso e notificar os outros administradores.';
-$string['notobjectionable'] = 'Não objectável';
-$string['viewunobjectionablesubject'] = 'A Página %s for marcada como não objectável por %s';
-$string['viewunobjectionablebody'] = '%s verificou %s de %s e marcou-o como já não contendo material objectável.';
-$string['updatewatchlistfailed'] = 'A actualização da lista de monitorização falhou';
-$string['watchlistupdated'] = 'A sua lista de monitorização foi actualizada';
-$string['viewvisitcount'] = '%d visitas desde %s até %s';
-
-$string['friend'] = 'Amigo';
-$string['profileicon'] = 'Foto do Perfil';
-
-// general views stuff
-$string['Added'] = 'Adicionada(s)';
-$string['share'] = 'Partilhar';
-$string['sharewith'] = 'Partilhar com';
+$string['access'] = 'Acesso';
+$string['accessbetweendates2'] = 'Ninguém pode ver esta Página antes de %s ou depois de %s';
+$string['accessdates'] = 'Data/Hora de Acesso';
+$string['accessfromdate2'] = 'Mais ninguém pode ver esta Página antes de %s';
 $string['accesslist'] = 'Lista de acesso';
-$string['sharewithmygroups'] = 'Partilhar com os meus grupos ';
-$string['shareview'] = 'Partilhar página';
-$string['otherusersandgroups'] = 'Partilhar com outros utilizadores e grupos';
-$string['moreoptions'] = 'Opções Avançadas';
-$string['allviews'] = 'Todas as Páginas';
-
-$string['submitviewconfirm'] = 'Se submeter \'%s\' para \'%s\' para avaliação, não poderá editar a Página até que o seu tutor tenha terminado de marcar a Página. Tem a certeza que deseja submeter esta Página agora?';
-$string['viewsubmitted'] = 'Página submetida';
-$string['submitviewtogroup'] = 'Submeter \'%s\' para \'%s\' para avaliação';
-$string['cantsubmitviewtogroup'] = 'Você não pode submeter esta Página para este grupo para avaliação';
-
-$string['cantdeleteview'] = 'Você não pode eliminar esta Página';
-$string['deletespecifiedview'] = 'Eliminar Página "%s"';
-$string['deleteviewconfirm'] = 'Tem a certeza que deseja eliminar esta Página? Não é possível voltar atrás.<br/>Por favor considere efectuar uma cópia de segurança desta página <a href="%sexport/" target="_blank">exportando-a</a>.';
-$string['deleteviewconfirmnote'] = '<p><strong>Nota:</strong> todos os blocos de conteúdos que foram adicionados a esta ´Página não serão eliminados. No entanto, qualquer feedback que tenha sido feito em relação á página será eliminado.</p>';
-
-$string['editaccesspagedescription3'] = 'Por omissão, apenas você pode ver as suas Páginas. Pode partilhar páginas com outros adicionando regras de acesso. Quando terminar, clique sobre "Guardar" para continuar.';
-$string['editaccessinvalidviewset'] = 'Tentativa de editar  acessos num conjunto inválido de páginas e coleções';
-
-$string['overridingstartstopdate'] = 'Substituindo as datas de Inicio/Fim';
-$string['overridingstartstopdatesdescription'] = 'Se quiser, pode definir uma data de substituição para a data inicio ou/e fim. As outras pessoas não poderão ver a sua Página antes da data de inicio ou depois da data de fim, independentemente de qualquer outro acesso que lhe tenha sido dado.';
-
-$string['emptylabel'] = 'Clique aqui para introduzir um texto para esta etiqueta';
-$string['empty_block'] = 'Seleccione um artefacto da árvore da esquerda para ser colocado aqui';
-
-$string['viewinformationsaved'] = 'Informação da Página guardada com sucesso';
-
-$string['canteditdontown'] = 'Você não pode editar esta Página porque não lhe pertence';
-$string['canteditsubmitted'] = 'Você não pode editar esta Página porque foi submetida para avaliação para "%s". Terá que esperar até que um tutor liberte a sua Página.';
-$string['Submitted'] = 'Submetida';
-$string['submittedforassessment'] = 'Submetida para avaliação';
-
-$string['addtutors'] = 'Adicionar Tutores';
-$string['viewcreatedsuccessfully'] = 'Página criada com sucesso';
-$string['viewaccesseditedsuccessfully'] = 'Acesso á Página guardado com sucesso';
-$string['viewsavedsuccessfully'] = 'Página guardada com sucesso';
-$string['updatedaccessfornumviews'] = 'As regras de acesso foram atualizadas em %d página(s)';
-
-$string['invalidcolumn'] = 'A coluna %s não respeita a série definida';
-
-$string['confirmcancelcreatingview'] = 'Esta Página não foi terminada. Tem a certeza que deseja cancelar?';
-
-// view control stuff
-
-$string['editblockspagedescription'] = '<p>Arraste e largue blocos de conteúdos dos separadores abaixo, para criar a sua Página.</p>';
-$string['displayview'] = 'Exibir Página';
-$string['editthisview'] = 'Editar esta Página';
-
-$string['success.addblocktype'] = 'Bloco adicionado com sucesso';
-$string['err.addblocktype'] = 'Não foi possível adicionar o bloco á sua Página';
-$string['success.moveblockinstance'] = 'Bloco movido com sucesso';
-$string['err.moveblockinstance'] = 'Não foi possível mover o bloco para posição especificada';
-$string['success.removeblockinstance'] = 'Bloco eliminado com sucesso';
-$string['err.removeblockinstance'] = 'Não foi possível eliminar o bloco';
-$string['success.addcolumn'] = 'Coluna adicionada com sucesso';
-$string['err.addcolumn'] = 'Ocorreu um erro ao adicionar uma nova coluna';
-$string['success.removecolumn'] = 'Coluna eliminada com sucesso';
-$string['err.removecolumn'] = 'Ocorreu um erro ao eliminar a coluna';
-$string['success.changetheme'] = 'Tema actualizado com sucesso';
-$string['err.changetheme'] = 'Não foi possível actualizar o tema';
-
-$string['confirmdeleteblockinstance'] = 'Tem a certeza que deseja eliminar este bloco?';
-$string['blockinstanceconfiguredsuccessfully'] = 'Bloco configurado com sucesso';
-$string['blockconfigurationrenderingerror'] = 'Ocorreu um erro na configuração porque o bloco não pôde ser visualizado.';
-
-$string['blocksintructionnoajax'] = 'Seleccione um bloco e escolha onde o quer colocar na sua Página. Pode posicionar um bloco utilizando as setas que estão na barra de título';
-$string['blocksinstructionajax'] = 'Esta área providencia uma pré-visualização da sua Página.<br>Arraste blocos abaixo desta linha para os adicinar á estrutura da sua Página. Pode arrastar blocos na sua estrutura da Página para os posicionar.';
-
-$string['addnewblockhere'] = 'Adicionar bloco aqui';
+$string['accessuntildate2'] = 'Mais ninguém pode ver depois de %s';
 $string['add'] = 'Adicionar';
 $string['addcolumn'] = 'Adicionar coluna';
-$string['remove'] = 'Eliminar';
-$string['removecolumn'] = 'Eliminar esta coluna';
-$string['moveblockleft'] = "Mover o bloco %s para a esquerda";
-$string['movethisblockleft'] = "Mover este bloco para a esquerda";
-$string['moveblockdown'] = "Mover o bloco %s para baixo";
-$string['movethisblockdown'] = "Mover este bloco para baixo";
-$string['moveblockup'] = "Mover o bloco %s para cima";
-$string['movethisblockup'] = "Mover este bloco para cima";
-$string['moveblockright'] = "Mover o bloco %s para a direita";
-$string['movethisblockright'] = "Mover este bloco para a direita";
-$string['Configure'] = 'Configurar';
-$string['configureblock'] = 'Configurar o bloco %s';
-$string['configurethisblock'] = 'Configurar este bloco';
-$string['removeblock'] = 'Eliminar o bloco %s ';
-$string['removethisblock'] = 'Eliminar este bloco';
+$string['addedtowatchlist'] = 'Esta Página foi adicionada á lista de monitorização';
+$string['addnewblockhere'] = 'Adicionar bloco aqui';
+$string['addtowatchlist'] = 'Adicionar Página á lista de monitorização';
+$string['addusertogroup'] = 'Adicionar este utilizador ao grupo';
+$string['allowcommentsonview'] = 'Se seleccionado, os utilizadores serão autorizados a deixar comentários.';
+$string['allowcopying'] = 'Permitir cópia';
+$string['allviews'] = 'Todas as Páginas';
+$string['alreadyinwatchlist'] = 'Esta Página já está na lista de monitorização';
+$string['artefacts'] = 'Artefactos';
+$string['artefactsinthisview'] = 'Artefactos nesta Página';
+$string['attachedfileaddedtofolder'] = 'O ficheiro em anexo %s foi adicionado á pasta \'%s\'.';
+$string['attachment'] = 'Anexo';
+$string['back'] = 'Voltar';
+$string['blockconfigurationrenderingerror'] = 'Ocorreu um erro na configuração porque o bloco não pôde ser visualizado.';
+$string['blockcopypermission'] = 'Bloquear permissão de cópia';
+$string['blockcopypermissiondesc'] = 'Se autorizar que outros utilziadores possam copiar esta Página, poderá escolher como este bloco será copiado';
+$string['blockinstanceconfiguredsuccessfully'] = 'Bloco configurado com sucesso';
+$string['blocksinstructionajax'] = 'Esta área providencia uma pré-visualização da sua Página.<br>Arraste blocos abaixo desta linha para os adicinar á estrutura da sua Página. Pode arrastar blocos na sua estrutura da Página para os posicionar.';
+$string['blocksintructionnoajax'] = 'Seleccione um bloco e escolha onde o quer colocar na sua Página. Pode posicionar um bloco utilizando as setas que estão na barra de título';
 $string['blocktitle'] = 'Título do bloco';
-
-$string['changemyviewlayout'] = 'Modificar a estrutura da Minha Página';
-$string['viewcolumnspagedescription'] = 'Em primeiro lugar, seleccione o número de colunas na sua Página. No próximo passo, poderá modificar a largura das colunas.';
-$string['viewlayoutpagedescription'] = 'Seleccione como deseja definir a estrutura das colunas na sua Página.';
-$string['changeviewlayout'] = 'Alterar a estrutura das colunas na Minha Página';
-$string['viewlayoutchanged'] = 'A estrutura da Página foi alterada';
-$string['numberofcolumns'] = 'Número de colunas';
-$string['changecolumnlayoutfailed'] = 'Não foi possível alterar a estrutura das colunas. Alguém poderia estar a editar a estrutura ao mesmo tempo. Por favor tente novamente mais tarde.';
-
-$string['by'] = 'por';
-$string['viewtitleby'] = '%s por <a href="%s">%s</a>';
-$string['in'] = 'em';
-$string['noblocks'] = 'Desculpe, não existem blocos nesta categoria';
-$string['timeofsubmission'] = 'Hora da submissão';
-
-$string['column'] = 'coluna';
-$string['columns'] = 'colunas';
-$string['100'] = $string['50,50'] = $string['33,33,33'] = $string['25,25,25,25'] = $string['20,20,20,20,20'] = 'Larguras idênticas';
-$string['67,33'] = 'Coluna esquerda maior';
-$string['33,67'] = 'Coluna direita maior';
-$string['25,50,25'] = 'Coluna central maior';
-$string['15,70,15'] = 'Coluna central enorme';
-$string['20,30,30,20'] = 'Colunas centrais maiores';
-$string['noviewlayouts'] = 'Não existem estruturas de Página para a Página de coluna ';
-$string['cantaddcolumn'] = 'Não pode adicionar mais colunas a esta Página';
-$string['cantremovecolumn'] = 'Não pode remover a última coluna desta Página';
-
 $string['blocktypecategory.external'] = 'Conteúdos externos';
 $string['blocktypecategory.fileimagevideo'] = 'Ficheiros, imagens e video';
 $string['blocktypecategory.general'] = 'Geral';
 $string['blocktypecategory.social'] = 'Social';
-
-$string['notitle'] = 'Sem título';
-$string['clickformoreinformation'] = 'Clique para mais informações e para colocar comentários';
-
-$string['Browse'] = 'Consultar';
-$string['Search'] = 'Pesquisar';
-$string['noartefactstochoosefrom'] = 'Desculpe, não existem artefactos para escolha';
-
-$string['access'] = 'Acesso';
-$string['noaccesstoview'] = 'Não tem permissões para aceder a esta Página';
-
+$string['by'] = 'por';
+$string['cantaddcolumn'] = 'Não pode adicionar mais colunas a esta Página';
+$string['cantdeleteview'] = 'Você não pode eliminar esta Página';
+$string['canteditdontown'] = 'Você não pode editar esta Página porque não lhe pertence';
+$string['canteditsubmitted'] = 'Você não pode editar esta Página porque foi submetida para avaliação para "%s". Terá que esperar até que um tutor liberte a sua Página.';
+$string['cantremovecolumn'] = 'Não pode remover a última coluna desta Página';
+$string['cantsubmitviewtogroup'] = 'Você não pode submeter esta Página para este grupo para avaliação';
+$string['changecolumnlayoutfailed'] = 'Não foi possível alterar a estrutura das colunas. Alguém poderia estar a editar a estrutura ao mesmo tempo. Por favor tente novamente mais tarde.';
+$string['changemyviewlayout'] = 'Modificar a estrutura da Minha Página';
+$string['changeviewlayout'] = 'Alterar a estrutura das colunas na Minha Página';
 $string['changeviewtheme'] = 'O tema que escolheu para esta página já não está disponível para si. Por favor, escolha um tema diferente.';
-
-// Templates
-$string['Template'] = 'Modelo';
-$string['allowcopying'] = 'Permitir cópia';
-$string['templatedescription'] = 'Marque esta caixa se pretender que as pessoas possam ver a sua Página e fazer cópias da mesma, juntamente com qualquer ficheiro ou pasta que contenha.';
-$string['templatedescriptionplural'] = 'Marque esta caixa se pretender que as pessoas que podem ver as suas Páginas possam fazer cópias das mesmas, juntamente com qualquer ficheiro ou pasta que contenham.';
-$string['choosetemplatepagedescription'] = '<p>Aqui pode pesquisar através das Páginas que está autorizado a copiar, de modo a utilizá-las como ponto de partida para a sua própria Página. Pode ver uma pré-visualização de cada Página clicando no nome da mesma. Quando encontrar a Página que deseja copiar, clique sobre o botão "Copiar Página" para efectuar uma cópia e começar a adaptar a Página ao seu agrado.</p>';
-$string['choosetemplategrouppagedescription'] = '<p>Aqui pode pesquisar através das Páginas que este grupo está autorizado a copiar, de modo a utilizá-las como ponto de partida para a sua própria Página. Pode ver uma pré-visualização de cada Página clicando no nome da mesma. Quando encontrar a Página que deseja copiar, clique sobre o botão "Copiar Página" para efectuar uma cópia e começar a adaptar a Página ao seu agrado.</p><p><strong>Nota:</strong> Os Grupos não podem efectuar cópias de Diários ou de mensagens de Diários.</p>';
-$string['choosetemplateinstitutionpagedescription'] = '<p>Aqui pode pesquisar através das Páginas que esta Instituição está autorizada a copiar, de modo a utilizá-las como ponto de partida para a sua própria Página. You can see a preview of each View by clicking on its name. Pode ver uma pré-visualização de cada Página clicando no nome da mesma. Quando encontrar a Página que deseja copiar, clique sobre o botão "Copiar Página" para efectuar uma cópia e começar a adaptar a Página ao seu agrado.</p><p><strong>Note:</strong> As Instituições não podem efectuar cópias de Diários ou de mensagens de Diários.</p>';
+$string['choosetemplategrouppagedescription'] = '<p>Aqui pode pesquisar através das Páginas que este grupo está autorizado a copiar, de modo a utilizá-las como ponto de partida para a sua própria Página. Pode ver uma pré-visualização de cada Página clicando no nome da mesma. Quando encontrar a Página que deseja copiar, clique sobre o botão "Copiar Página" para efetuar uma cópia e começar a adaptar a Página ao seu agrado.</p><p><strong>Nota:</strong> Os Grupos não podem efetuar cópias de Diários ou de mensagens de Diários.</p>';
+$string['choosetemplateinstitutionpagedescription'] = '<p>Aqui pode pesquisar através das Páginas que esta Instituição está autorizada a copiar, de modo a utilizá-las como ponto de partida para a sua própria Página. Pode ver uma pré-visualização de cada Página clicando no nome da mesma. Quando encontrar a Página que deseja copiar, clique sobre o botão "Copiar Página" para efetuar uma cópia e começar a adaptar a Página ao seu agrado.</p><p><strong>Nota:</strong> As Instituições não podem efetuar cópias de Diários ou de mensagens de Diários.</p>';
+$string['choosetemplatepageandcollectiondescription'] = '<p>Aqui pode procurar através das páginas que você tem permissão para copiar como ponto de partida para fazer uma nova página. Pode antever a versão final de cada página, clicando no seu nome. Depois de ter encontrado a página que pretende  copiar, clique no correspondente botão "Copiar página" para fazer a cópia e começar a personalizá-la. Você também pode optar por copiar toda a coleção que a página pertence, clicando no botão "Copiar coleção".</p>';
+$string['choosetemplatepagedescription'] = '<p>Aqui pode pesquisar através das Páginas que está autorizado a copiar, de modo a utilizá-las como ponto de partida para a sua própria Página. Pode ver uma pré-visualização de cada Página clicando no nome da mesma. Quando encontrar a Página que deseja copiar, clique sobre o botão "Copiar Página" para efetuar uma cópia e começar a adaptar a Página ao seu agrado.</p>';
+$string['clickformoreinformation'] = 'Clique para mais informações e para colocar comentários';
+$string['column'] = 'coluna';
+$string['columns'] = 'colunas';
+$string['complaint'] = 'Reclamação';
+$string['configureblock'] = 'Configurar o bloco %s';
+$string['configurethisblock'] = 'Configurar este bloco';
+$string['confirmcancelcreatingview'] = 'Esta Página não foi terminada. Tem a certeza que deseja cancelar?';
+$string['confirmdeleteblockinstance'] = 'Tem a certeza que deseja eliminar este bloco?';
 $string['copiedblocksandartefactsfromtemplate'] = 'Copiados %d blocos e %d artefactos de %s';
-$string['filescopiedfromviewtemplate'] = 'Ficheiros copiados de %s';
-$string['viewfilesdirname'] = 'Ver ficheiros';
-$string['viewfilesdirdesc'] = 'Ficheiros de Páginas copiadas';
-$string['thisviewmaybecopied'] = 'É permitida a cópia';
-$string['copythisview'] = 'Copiar esta Página';
-$string['copyview'] = 'Copiar Página';
-$string['createemptyview'] = 'Criar Página em branco';
 $string['copyaview'] = 'Copiar uma Página';
-$string['Untitled'] = 'Sem título';
-$string['copyfornewusers'] = 'Copiar para novos utilizador';
-$string['copyfornewusersdescription'] = 'Sempre que um novo utilizador é criado, será efectuada uma cópia automática desta Página para portefólio do utilizadoro.';
-$string['copyfornewmembers'] = 'Copiar para novos membros da Instituição';
-$string['copyfornewmembersdescription'] = 'Cria uma cópia automática desta Página para todos os membros de %s.';
 $string['copyfornewgroups'] = 'Copiar para novos grupos';
 $string['copyfornewgroupsdescription'] = 'Cria uma cópia automática desta Página para todos os grupos destes tipos:';
-$string['searchviews'] = 'Pesquisar Páginas';
-$string['searchowners'] = 'Pesquisar proprietários';
-$string['owner'] = 'proprietário';
-$string['Owner'] = 'Proprietário';
-$string['owners'] = 'proprietários';
-$string['show'] = 'Exibir';
-$string['searchviewsbyowner'] = 'Pesquisar Páginas por proprietário:';
-$string['selectaviewtocopy'] = 'Seleccione a Página que deseja copiar:';
+$string['copyfornewmembers'] = 'Copiar para novos membros da Instituição';
+$string['copyfornewmembersdescription'] = 'Cria uma cópia automática desta Página para todos os membros de %s.';
+$string['copyfornewusers'] = 'Copiar para novos utilizador';
+$string['copyfornewusersdescription'] = 'Sempre que um novo utilizador é criado, será efectuada uma cópia automática desta Página para portefólio do utilizadoro.';
+$string['copynewusergroupneedsloggedinaccess'] = 'As Páginas copiadas para novos utilizadores ou grupos devem permitir acesso a utilizadores autenticados.';
+$string['copythisview'] = 'Copiar esta Página';
+$string['copyview'] = 'Copiar Página';
+$string['copyvieworcollection'] = 'Copiar a página ou a colecção.';
+$string['createemptyview'] = 'Criar Página em branco';
+$string['createview'] = 'Criar Página';
+$string['dashboard'] = 'Painel';
+$string['dashboardviewtitle'] = 'Visualização do Painel';
+$string['date'] = 'Data';
+$string['deletespecifiedview'] = 'Eliminar Página "%s"';
+$string['deletethisview'] = 'Eliminar esta Página';
+$string['deleteviewconfirm1'] = 'Tem a certeza que pretende apagar esta página? Não irá poder recuperar esta página uma vez apagada.';
+$string['deleteviewconfirmbackup'] = 'Por favor considere a possibilidade de fazer uma cópia de segurança desta página: <a href="%sexport/" target="_blank">guardar</a>.';
+$string['deleteviewconfirmnote1'] = '<strong>NOTA:</strong> Todos os seus ficheiros e entradas no jornal que referenciou nesta página ainda estarão acessíveis.<br/>No entanto, qualquer comentário ou resposta afixado nesta página será apagado.';
+$string['description'] = 'Ver Descrição';
+$string['displayview'] = 'Exibir Página';
+$string['editaccess'] = 'Editar Acesso';
+$string['editaccessinvalidviewset'] = 'Tentativa de editar  acessos num conjunto inválido de páginas e coleções';
+$string['editaccesspagedescription3'] = 'Por omissão, apenas você pode ver as suas Páginas. Pode partilhar páginas com outros adicionando regras de acesso. Quando terminar, clique sobre "Guardar" para continuar.';
+$string['editblockspagedescription'] = '<p>Arraste e largue blocos de conteúdos dos separadores abaixo, para criar a sua Página.</p>';
+$string['editcontent'] = 'Editar Conteúdo';
+$string['editcontentandlayout'] = 'Editar Conteúdo e Estrutura';
+$string['editlayout'] = 'Editar Estrutura';
+$string['editsecreturlaccess'] = 'Editar acesso ao endereço confidencial';
+$string['editsecreturlsintable'] = '<b>Endereços confidenciais</b> não podem ser inseridas nesta página pois devem ser geradas individualmente. Para inserir endereços confidenciais, por favor regresse à <a href="%s">lista de páginas e coleções</a>.';
+$string['editthisview'] = 'Editar esta Página';
+$string['edittitle'] = 'Editar Titulo';
+$string['edittitleanddescription'] = 'Editar Titulo e Descrição';
+$string['empty_block'] = 'Seleccione um artefacto da árvore da esquerda para ser colocado aqui';
+$string['emptylabel'] = 'Clique aqui para introduzir um texto para esta etiqueta';
+$string['err.addblocktype'] = 'Não foi possível adicionar o bloco á sua Página';
+$string['err.addcolumn'] = 'Ocorreu um erro ao adicionar uma nova coluna';
+$string['err.changetheme'] = 'Não foi possível actualizar o tema';
+$string['err.moveblockinstance'] = 'Não foi possível mover o bloco para posição especificada';
+$string['err.removeblockinstance'] = 'Não foi possível eliminar o bloco';
+$string['err.removecolumn'] = 'Ocorreu um erro ao eliminar a coluna';
+$string['everyoneingroup'] = 'Todos no Grupo';
+$string['filescopiedfromviewtemplate'] = 'Ficheiros copiados de %s';
+$string['forassessment'] = 'para análise';
+$string['friend'] = 'Amigo';
+$string['friends'] = 'Amigos';
+$string['generatesecreturl'] = 'Gerado um novo endereço confidencial para %s';
+$string['grouphomepage'] = 'Página de Grupo';
+$string['grouphomepagedescription'] = 'A Página do Grupo é o conteúdo que aparece no separador "Sobre" para este grupo';
+$string['grouphomepageviewtitle'] = 'Visualização da página de Grupo';
+$string['groups'] = 'Grupos';
+$string['groupviews'] = 'Páginas do Grupo';
+$string['in'] = 'em';
+$string['institutionviews'] = 'Páginas da Instituição';
+$string['invalidcolumn'] = 'A coluna %s não respeita a série definida';
+$string['inviteusertojoingroup'] = 'Convidar este utilizador para se juntar ao grupo';
+$string['listedinpages'] = 'Listado em páginas';
 $string['listviews'] = 'Listar Páginas';
+$string['lockedgroupviewdesc'] = 'Se bloquear esta página, apenas os administradores do grupo a poderão editar.';
+$string['loggedin'] = 'Utilizadores autenticados';
+$string['moreinstitutions'] = 'Mais instituições';
+$string['moreoptions'] = 'Opções Avançadas';
+$string['moveblockdown'] = 'Mover o bloco %s para baixo';
+$string['moveblockleft'] = 'Mover o bloco %s para a esquerda';
+$string['moveblockright'] = 'Mover o bloco %s para a direita';
+$string['moveblockup'] = 'Mover o bloco %s para cima';
+$string['movethisblockdown'] = 'Mover este bloco para baixo';
+$string['movethisblockleft'] = 'Mover este bloco para a esquerda';
+$string['movethisblockright'] = 'Mover este bloco para a direita';
+$string['movethisblockup'] = 'Mover este bloco para cima';
+$string['newsecreturl'] = 'Novo endereço confidencial';
+$string['newstartdatemustbebeforestopdate'] = 'A data de inicio tem que ser antes da data de fim';
+$string['newstopdatecannotbeinpast'] = 'A data de fim não pode ser no passado';
+$string['next'] = 'Seguinte';
+$string['noaccesstoview'] = 'Não tem permissões para aceder a esta Página';
+$string['noartefactstochoosefrom'] = 'Desculpe, não existem artefactos para escolha';
+$string['noblocks'] = 'Desculpe, não existem blocos nesta categoria';
+$string['nobodycanseethisview2'] = 'Apenas você pode ver esta Página';
 $string['nocopyableviewsfound'] = 'Não existem Páginas que possa copiar';
 $string['noownersfound'] = 'Não foram encontrados proprietários';
-$string['Preview'] = 'Pré-visualizar';
-$string['viewscopiedfornewusersmustbecopyable'] = 'Deverá autorizar a cópia de Páginas antes de definir a Página a ser copiada para os novos utilizadores.';
-$string['viewscopiedfornewgroupsmustbecopyable'] = 'Deverá autorizar a cópia de Páginas antes de definir a Página a ser copiada para os novos grupos.';
-$string['copynewusergroupneedsloggedinaccess'] = 'As Páginas copiadas para novos utilizadores ou grupos devem permitir acesso a utilizadores autenticados.';
-$string['viewcopywouldexceedquota'] = 'Copiar esta Página iria exceder a sua cota de ficheiros.';
-
-$string['blockcopypermission'] = 'Bloquear permissão de cópia';
-$string['blockcopypermissiondesc'] = 'Se autorizar que outros utilziadores possam copiar esta Página, poderá escolher como este bloco será copiado';
-
-// View types
-$string['dashboard'] = 'Painel';
-$string['profile'] = 'Perfil';
+$string['nothemeselected'] = 'Nenhum tema selecionado';
+$string['notifyadministrator'] = 'Notificar o administrador';
+$string['notifyadministratorconfirm'] = 'Tem certeza que deseja reportar esta página como contendo material censurável?';
+$string['notitle'] = 'Sem título';
+$string['notobjectionable'] = 'Não objectável';
+$string['noviewlayouts'] = 'Não existem estruturas de Página para a Página de coluna';
+$string['noviews'] = 'Sem Páginas.';
+$string['numberofcolumns'] = 'Número de colunas';
+$string['nviews'] = array(
+    0 => '1 página',
+    1 => '%s páginas',
+);
+$string['otherusersandgroups'] = 'Partilhar com outros utilizadores e grupos';
+$string['overridingstartstopdate'] = 'Substituindo as datas de Inicio/Fim';
+$string['overridingstartstopdatesdescription'] = 'Se quiser, pode definir uma data de substituição para a data inicio ou/e fim. As outras pessoas não poderão ver a sua Página antes da data de inicio ou depois da data de fim, independentemente de qualquer outro acesso que lhe tenha sido dado.';
+$string['owner'] = 'proprietário';
+$string['ownerformat'] = 'Formato de visualização do nome';
+$string['ownerformatdescription'] = 'Como deseja que as pessoas que visualizem a sua Página vejam o seu nome?';
+$string['owners'] = 'proprietários';
 $string['portfolio'] = 'Portefólio';
-$string['grouphomepage'] = 'Página de Grupo';
-
-$string['grouphomepagedescription'] = 'A Página do Grupo é o conteúdo que aparece no separador "Sobre" para este grupo';
-
-// Shared views
+$string['print'] = 'Imprimir';
+$string['profile'] = 'Perfil';
+$string['profileicon'] = 'Foto do Perfil';
+$string['profilenotshared'] = 'Restringido o acesso ao perfil completo do utilizador.';
+$string['profileviewtitle'] = 'Visualização do Perfil';
+$string['public'] = 'Público';
+$string['publicaccessnotallowed'] = 'O responsável ou administrador do sítio inibiu a utilização de páginas públicas e endereços confidenciais. Quaisquer endereços confidenciais listados aqui estão atualmente inativos.';
+$string['reallyaddaccesstoemptyview'] = 'A sua Página não contém blocos. Tem a certeza que deseja dar acesso á sua Página, a estes utilizadores?';
+$string['reallydeletesecreturl'] = 'Tem a certeza que deseja eliminar este endereço?';
+$string['remove'] = 'Eliminar';
+$string['removeblock'] = 'Eliminar o bloco %s';
+$string['removecolumn'] = 'Eliminar esta coluna';
+$string['removedfromwatchlist'] = 'Esta Página foi removida da lista de monitorização';
+$string['removefromwatchlist'] = 'Remover Página da lista de monitorização';
+$string['removethisblock'] = 'Eliminar este bloco';
+$string['reportobjectionablematerial'] = 'Reportar material objectável';
+$string['reportsent'] = 'O seu relatório foi enviado';
+$string['retainviewrights1'] = 'Manter permissões de acesso nas páginas ou coleções copiadas';
+$string['retainviewrightsdescription'] = 'Marque esta caixa se pretender adicionar um acesso para visualizar cópias desta página ou coleções que são copiados por outros utilizadores. Os utilizadores podem revogar esse acesso depois de o copiar se assim o desejarem. Páginas que são copiadas a partir de uma cópia desta página ou coleção não irão ter o mesmo acesso.';
+$string['retainviewrightsgroupdescription'] = 'Marque esta caixa se pretender adicionar um acesso para os membros deste grupo poderem ver cópias desta página que são copiadas por outros utilizadores. Os utilizadores podem revogar esse acesso e depois de copir se assim o desejarem. Páginas que são copiadas a partir de uma cópia desta página não irão ter esse mesmo acesso.';
+$string['searchowners'] = 'Pesquisar proprietários';
+$string['searchviews'] = 'Pesquisar Páginas';
+$string['searchviewsbyowner'] = 'Pesquisar Páginas por proprietário:';
+$string['secreturldeleted'] = 'O seu endereço confidencial foi eliminado.';
+$string['secreturls'] = 'Endereços confidenciais';
+$string['secreturlupdated'] = 'Endereço confidencial actualizado';
+$string['selectaviewtocopy'] = 'Seleccione a Página que deseja copiar:';
+$string['share'] = 'Partilhar';
 $string['sharedviews'] = 'Páginas partilhadas';
-$string['titleanddescription'] = 'Título, descrição, tags';
-$string['tagsonly'] = 'Apenas Tags';
 $string['sharedviewsdescription'] = 'Esta página lista as páginas, partilhadas consigo, mais recentemente modificadas ou comentadas. Podem ter sido partilhadas consigo directamente, partilhadas com amigos do proprietário, ou partilhadas com um dos seus grupos.';
-
-?>
+$string['sharedwith'] = 'Partilhada com';
+$string['shareview'] = 'Partilhar página';
+$string['sharewith'] = 'Partilhar com';
+$string['sharewithmygroups'] = 'Partilhar com os meus grupos';
+$string['sharewithmyinstitutions'] = 'Partilhar com as minhas instituições';
+$string['sharewithusers'] = 'Partilhar com os utilizadores';
+$string['show'] = 'Exibir';
+$string['startdate'] = 'Data/Hora de inicio de Acesso';
+$string['stopdate'] = 'Data/Hora de fim de Acesso';
+$string['submitaviewtogroup'] = 'Submeter uma Página para este grupo';
+$string['submittedforassessment'] = 'Submetida para avaliação';
+$string['submitthisviewto'] = 'Submeter esta Página para';
+$string['submitviewconfirm'] = 'Se submeter \'%s\' para \'%s\' para avaliação, não poderá editar a Página até que o seu tutor tenha terminado de marcar a Página. Tem a certeza que deseja submeter esta Página agora?';
+$string['submitviewtogroup'] = 'Submeter \'%s\' para \'%s\' para avaliação';
+$string['success.addblocktype'] = 'Bloco adicionado com sucesso';
+$string['success.addcolumn'] = 'Coluna adicionada com sucesso';
+$string['success.changetheme'] = 'Tema actualizado com sucesso';
+$string['success.moveblockinstance'] = 'Bloco movido com sucesso';
+$string['success.removeblockinstance'] = 'Bloco eliminado com sucesso';
+$string['success.removecolumn'] = 'Coluna eliminada com sucesso';
+$string['tagsonly'] = 'Apenas etiquetas';
+$string['templatedescription'] = 'Marque esta caixa se pretender que as pessoas possam ver a sua Página e fazer cópias da mesma, juntamente com qualquer ficheiro ou pasta que contenha.';
+$string['templatedescriptionplural'] = 'Marque esta caixa se pretender que as pessoas que podem ver as suas Páginas possam fazer cópias das mesmas, juntamente com qualquer ficheiro ou pasta que contenham.';
+$string['thisviewmaybecopied'] = 'É permitida a cópia';
+$string['timeofsubmission'] = 'Hora da submissão';
+$string['title'] = 'Ver Titulo';
+$string['titleanddescription'] = 'Título, descrição, etiquetas';
+$string['token'] = 'Endereço confidencial';
+$string['unrecogniseddateformat'] = 'Formato de data desconhecido';
+$string['updatedaccessfornumviews'] = 'As regras de acesso foram atualizadas em %d página(s)';
+$string['updatewatchlistfailed'] = 'A atualização da lista de monitorização falhou';
+$string['users'] = 'Utilizadores';
+$string['view'] = 'página';
+$string['viewaccesseditedsuccessfully'] = 'Acesso á Página guardado com sucesso';
+$string['viewauthor'] = 'por <a href="%s">%s</a>';
+$string['viewcolumnspagedescription'] = 'Em primeiro lugar, seleccione o número de colunas na sua Página. No próximo passo, poderá modificar a largura das colunas.';
+$string['viewcopywouldexceedquota'] = 'Copiar esta Página iria exceder a sua cota de ficheiros.';
+$string['viewcreatedsuccessfully'] = 'Página criada com sucesso';
+$string['viewdeleted'] = 'Página eliminada';
+$string['viewfilesdirdesc'] = 'Ficheiros de Páginas copiadas';
+$string['viewfilesdirname'] = 'Ver ficheiros';
+$string['viewinformationsaved'] = 'Informação da Página guardada com sucesso';
+$string['viewlayoutchanged'] = 'A estrutura da Página foi alterada';
+$string['viewlayoutpagedescription'] = 'Seleccione como deseja definir a estrutura das colunas na sua Página.';
+$string['viewname'] = 'Nome da página';
+$string['viewobjectionableunmark'] = 'Esta Página, ou algo nela contido, foi reportado como tendo material objectável. Se já não é o caso, clique no botão para remover este aviso e notificar os outros administradores.';
+$string['views'] = 'páginas';
+$string['viewsavedsuccessfully'] = 'Página guardada com sucesso';
+$string['viewscopiedfornewgroupsmustbecopyable'] = 'Deverá autorizar a cópia de Páginas antes de definir a Página a ser copiada para os novos grupos.';
+$string['viewscopiedfornewusersmustbecopyable'] = 'Deverá autorizar a cópia de Páginas antes de definir a Página a ser copiada para os novos utilizadores.';
+$string['viewsownedbygroup'] = 'Páginas pertencentes a este grupo';
+$string['viewssharedtogroup'] = 'Páginas partilhadas com este grupo';
+$string['viewssharedtogroupbyothers'] = 'Páginas partilhadas com este grupo por outros utilizadores';
+$string['viewssubmittedtogroup'] = 'Páginas submetidas para este grupo';
+$string['viewsubmitted'] = 'Página submetida';
+$string['viewsubmittedtogroup'] = 'Esta Página foi submetida para <a href="%s">%s</a>';
+$string['viewsubmittedtogroupon'] = 'Esta Página foi submetida para <a href="%s">%s</a> em %s';
+$string['viewswithretainviewrightsmustbecopyable'] = 'Deve permitir / autorizar cópia antes de poder ver as cópias realizadas.';
+$string['viewtitleby'] = '%s por <a href="%s">%s</a>';
+$string['viewunobjectionablebody'] = '%s verificou %s de %s e marcou-o como já não contendo material objectável.';
+$string['viewunobjectionablesubject'] = 'A Página %s for marcada como não objectável por %s';
+$string['viewvisitcount'] = '%d visitas desde %s até %s';
+$string['watchlistupdated'] = 'A sua lista de monitorização foi actualizada';
+$string['whocanseethisview'] = 'Quem pode ver esta Página';
+$string['youhavenoviews'] = 'Você não tem Páginas.';
+$string['youhaventcreatedanyviewsyet'] = 'Ainda não tem páginas.';
+$string['youhaveoneview'] = 'Você tem 1 Página.';
+$string['youhavesubmitted'] = 'Você submeteu <a href="%s">%s</a> para este grupo';
+$string['youhavesubmittedon'] = 'Você submeteu <a href="%s">%s</a> para este grupo em %s';
+$string['youhaveviews'] = 'Você tem %s Páginas.';

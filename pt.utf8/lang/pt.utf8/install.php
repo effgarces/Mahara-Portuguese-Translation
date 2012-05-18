@@ -1,43 +1,18 @@
 <?php
-/**
- * Mahara: Electronic portefólio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * @package    mahara
- * @subpackage pt.utf8
- * @author     Direcção de Serviços de Tecnologias Educativas
- * @author     Emanuel Garcês & Rosa Silva
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
- *
- */
 
 defined('INTERNAL') || die();
 
-$string['aboutdefaultcontent'] = '<h1>About</h1>
-<p><i>Add text about your organisation or the installation here</i></p>
+$string['aboutdefaultcontent'] = '<h1>SobreAbout</h1>
+<p><i>Adicione um texto sobre a sua organização ou instação aqui</i></p>
 
-<p>[<i>Name of your installation here</i>] is powered by <a href="http://mahara.org">Mahara</a>. Mahara is provided freely as Open Source software (under the GNU General Public License). In brief, this means that you are allowed to copy, use and modify Mahara provided you agree to:</p>
+<p>[<i>Nome da sua instalação aqui</i>] utiliza o <a href="http://mahara.org">Mahara</a>. O Mahara é providenciado livremente como Software de Código Aberto (nos termos da Licença Pública Geral GNU). Em resumo, isto significa que lhe permitido copiar, utilizar e modificar o Mahara desde que concorde com:</p>
 
 <ul>
-    <li>provide the source code to others; </li>
-    <li>not modify or remove the original license and copyrights, and</li>
-    <li>apply this same license to any derivative work.</li>
-</ul>';
+    <li>providenciar o código fonte a outros; </li>
+    <li>não modificar ou remover a licença original e direitos de autor, e</li>
+    <li>aplicar esta mesma licença a qualquer trabalho derivado</li>
+</ul>
+';
 $string['homedefaultcontent'] = '<h1>Bem-vindos ao Mahara</h1>
 
 <p>O Mahara é um sistema de e-portfólios eletrónicos, blogues, construtor de currículos e rede social, ligando utilizadores e criando comunidades. O Mahara providencia as ferramentas necessárias para criar um ambiente de a aprendizagem e desenvolvimento pessoal.</p>
@@ -48,73 +23,70 @@ $string['loggedouthomedefaultcontent'] = '<h1>Bem-vindos ao Mahara</h1>
 <p>O Mahara é um sistema de e-portfólios eletrónicos, blogues, construtor de currículos e rede social, ligando utilizadores e criando comunidades. O Mahara providencia as ferramentas necessárias para criar um ambiente de a aprendizagem e desenvolvimento pessoal.</p>
 
 <p>Para mais informações pode ler <a href="about.php">Sobre</a> o Mahara ou em alternativa pode <a href="contact.php">Contactar-nos</a>.</p>';
-$string['privacydefaultcontent'] = '<h1>Privacy Statement</h1>
+$string['privacydefaultcontent'] = '<h1>Declaração de privacidade</h1>
     
-<h2>Introduction</h2>
+<h2>Introdução</h2>
 
-<p>We are committed to protecting your privacy and providing users with a safe and functional personal learning and development environment. This Statement of Privacy applies to the Mahara site and governs data collection and usage.</p>
+<p>Estamos empenhados a proteger a sua privacidade e a providenciar aos utilizadores um ambiente de aprendizagem pessoal e desenvolvimento seguro e funcional . Esta Declaração de Privacidade ao site Mahara e rege a recolha de dados e sua utilização.</p>
 
-<h2>Collection of personal information</h2>
+<h2>Recolha de informação pessoal</h2>
 
-<p>By registering on Mahara you will be required to provide us with a certain amount of personal information.  We will not disclose any of your personal information to any other person or organisation without your written consent unless authorised or required by law.</p>
+<p>Ao registar-se no Mahara será necessário que nos providencie uma certa quantidade de informação pessoal. Não iremos divulgar nenhuma da sua informação pessoal a nenhuma outra pessoa ou organização sem a sua autorização escrita salvo se autorizado ou exigido por lei.</p>
 
 <h2>Cookies</h2>
 
-<p>In order to use Mahara you must have cookies enabled within your browser.  Please note that no personal information is stored within the cookies used in Mahara.</p>
+<p>Para poder utilizar o Mahara deverá ter as cookies ativadas no seu browser. Por favor, note que nenhuma informação pessoal é armazenada nas cookies utilizadas no Mahara.</p>
 
-<p>A cookie is a data file that is placed on your computer by a webpage server. Cookies are not programs, spyware or viruses and are unable to perform any operation by themselves.</p>
+<p>Uma cookie é um ficheiro de dados que é colocado no seu computador por um servidor de páginas web. As cookies não são programas, spyware ou vírus e são incapazes de efetuar qualquer operação autonomamente.</p>
 
-<h2>How we use your personal information</h2>
+<h2>Como utilizamos a sua informação pessoal</h2>
 
-<p>We will only use your personal information for the purpose for which you provided it to us.</p>
+<p>Apenas utilizaremos a sua informação pessoal  com a finalidade para a qual você as forneceu para nós.</p>
 
-<p>As Mahara users you are able to determine what personal information you make available to others.  By default, unless assigned Administrator, Course Creator or Tutor access rights,  a user may only view your Display Name.  This includes listings within a Notification report or Visitor Log.</p>
+<p>Como utilizadores do Mahara, pode determinar qual a informação pessoal que disponibiliza para os outros.  Por omissão, a não ser que lhe tenham sido atribuídos direitos de acesso de Administrador, Criador de Cursos ou Tutor,  um utilizador apenas poderá visualizar o seu nome de apresentação. Isto incluí listagens nos relatórios de Notificação ou Registos de visitantes.</p>
 
-<p>We may also collect system usage for statistical purposes however this data will not identify any individual.</p>
+<p>Também poderemos recolher dados de utilização do sistema para fins estatísticos no entanto estes dados não identificam nenhum individuo.</p>
 
-<h2>Storage and security of your personal information</h2>
+<h2>Armazenamento e segurança da sua informação pessoal</h2>
 
-<p>We will take all reasonable steps to ensure that any personal information we hold is not subject to loss or misuse or unauthorised access, disclosure or alteration.</p>
+<p>Tomaremos todos as medidas razoaveis para asegurar que qualquer informação pessoal que tenhamos não seja sujeita a perda , uso indevido, acesso não autorizado,  divulgação ou alteração.</p>
 
-<p>In order to help protect your personal information, please do not disclose your Username or Password to person other than the Site Administrator.</p>
+<p>Por forma a ajudá-lo a proteger a sua informação pessoal, por favor não divulge o seu Nome de utilizador ou Senha a nenhuma pessoa com excepção do Administrador do SIte.</p>
 
-<h2>Changes to this privacy statement</h2>
+<h2>Alterações a esta declaração de privacidade</h2>
 
-<p>We may occasionally make adjustments to our privacy statement to reflect changes to the system and in response to customer feedback. As such we suggest you check the Privacy Statement each time you visit this site.</p>
+<p>Podemos, ocasionalmente, efetuar ajustes à nossa declaração de privacidade por forma a refletir alterações do sistema e em resposta a feedback dos utilizadores. Como tal sugerimos que verifique a Declaração de Privacidade de cada vez que visite este site.</p>
 
-<h2>Contact</h2>
+<h2>Contacto</h2>
 
-<p>If you have any questions regarding this Statement or believe we have not adhered to the above criteria, please <a href="contact.php">Contact Us</a> and we will use all reasonable efforts to remedy the issue.</p>';
-$string['termsandconditionsdefaultcontent'] = '<h1>Terms and Conditions</h1>
+<p>Se tiver alguma questão relativamente a esta Declaração ou se acredita que não cumprimos com os critérios acima, por favor <a href="contact.php">Contacte-nos</a> e faremos todos os esforços dentro da razoabilidade para remediar a questão.</p>';
+$string['termsandconditionsdefaultcontent'] = '<h1>Termos e condições</h1>
 
-<p>By using [Mahara] you are agreeing to the Terms and Conditions given below.</p>
+<p>Ao utilizar [Mahara] concorda com os Termos e condições  abaixo indicados.</p>
 
-<h2>Our obligations</h2>
+<h2>As nossas obrigaçãoes</h2>
 
-<p>The [Mahara] Site Administrators will undertake all reasonable steps to provide all users with a safe , secure and operational electronic portefólio system.  If at any time you feel your rights as a user have not been upheld or you have any questions regarding the below, please <a href="contact.php">Contact Us</a> immediately.</p>
+<p>Os Administradores do Site [Mahara] tomarão todas as medidas razoáveis para providenciar a todos os utilizadores um sistema de portefólios eletrónicos seguro e operacional.  Se em qualquer momento sentir que os seus direitos como utilizador, não foram cumpridos ou se tem alguma questão relativamente ao estipulado abaixo, por favor <a href="contact.php">Contacte-nos</a> imediatamente.</p>
 
-<p>[Mahara] will occasionally be unavailable for short periods of time as we release new system features.  We will endeavour to provide at least 3 working days notice of any scheduled outage.</p>
+<p>O [Mahara] irá ocasionalmente ficar indisponível por curtos períodos de tempo enquanto lançamos novas funcionalidades.  Faremos o possível para fornecer pelo menos 3 dias úteis de aviso prévio antes de qualquer interrupção agendada.</p>
 
-<p>You are encouraged to report objectionable material or inappropriate behaviour to the <a href="contact.php">Site Administrator</a> immediately.  We will ensure the matter is investigated in a timely manner.</p>
+<p>É encoragado a denunciar material censurável ou comportamentos inadequados ao <a href="contact.php">Administrador do Site</a> imediatamente.  Asseguraremos que o assunto será investigado tempo útil.</p>
 
-<p>Site Administrators may access your portefólio and its contents at anytime, however they will avoid doing so unless specifically required to support your use of [Mahara] or as per these Terms and Conditions.</p>
+<p>Os Administradores do Site poderão aceder ao seu portefólio e aos seus conteúdos a qualquer momento, no entanto evitarão fazê-lo a não ser que seja especificamente necessário para ajudá-lo no seu uso do [Mahara] ou de acordo com estes Termos e Condições.</p>
 
-<h2>Your obligations</h2>
+<h2>As suas obrigações</h2>
 
-<p> The <a href="privacy.php">Privacy Statement</a> should be considered an extension of these Terms and Conditions and be read by all users.</p>
+<p> A <a href="privacy.php">Declaração de Privacidade</a> deverá ser considerada uma extensão destes Termos e Condições e deverá ser lida por todos os utilizadores.</p>
 
-<p>Your [Mahara] account will expire after a given period of time or after given period of inactivity, as set by the Site Administrator. You will receive an email reminder shortly before your account is due to expire and we suggest you save your portefólio to your personal computer at this time, so that you may reuse it in the future.</p>
+<p>A sua conta no [Mahara] irá expirar após um tempo pré-determinado ou após um período de inatividade definido pelos Administradores do SIte. Irá receber um lembrete por correio eletrónico antes de a sua conta expirar e sugerimos que salve o seu portefólio no seu computador pessoal nesse momento, para que possa reutilizá-lo no futuro.</p>
 
-<p>All files and content you upload to [Mahara] are subject to New Zealand Copyright legislation.  You are responsible for ensuring you have appropriate permission to reproduce and publish any work that is not your own.  Incidents of plagiarism will be dealt with in accordance to your educational institution\'s policy.</p>
+<p>Todos os ficheiros e conteúdos que enviou para [Mahara] estão sujeitos á Legislação de Direitos de Autor de Portugal. É responsável por assegurar que possui as permissões apropriadas para reproduzir ou publicar qualquer trabalho que não seja seu.  Incidentes de plágio serão tratados de acordo com a política da sua instituição educacional.</p>
 
-<p>You must not use your portefólio to store or display offensive material.  If the Site Administrator receives report of any objectionable material within your portefólio, your account will be suspended and your access to [Mahara] frozen pending an investigation in accordance to the Student Conduct Policy or equivalent of your educational institution.  Where no Conduct Policy exists the matter will be referred to an appropriate staff member of your institution or organisation.</p>
+<p>Não deverá utilizar o seu portefólio para armazenar ou divulgar material ofensivo. Se os Administradores do Site receberem relatórios que indiquem a presença de material objetável no seu portefólio, a sua conta será suspensa e o seu acesso ao [Mahara] congelado durante a duração uma investigação de acordo com o código de conduta de estudantes ou equivalente, da sua instituição educacional. Caso não exista um código de conduta o assunto será encaminhado para um membro adequado da sua instituição ou organização.</p>
 
-<p>If the Site Administrator receives report of any inappropriate behaviour on your part, where it relates to [Mahara], your account will be suspended and your access to [Mahara] frozen pending an investigation in accordance to the Student Conduct Policy or equivalent of your educational institution.  Where no Conduct Policy exists the matter will be referred to an appropriate staff member of your institution or organisation.</p>
+<p>Se os Administradores do Site receberem algum relatório de comportamento inapropriado da sua parte, quando relacionado com a sua conta [Mahara], esta será suspensa e o seu acesso ao [Mahara] será congelado durante a duração de uma investigação de acordo com o código de conduta de estudantes ou equivalente, da sua instituição educacional. Caso não exista um código de conduta o assunto será encaminhado para um membro adequado da sua instituição ou organização.</p>
 
-<p>Inappropriate behaviour includes misuse of the objectionable material reporting system, intentionally attempting to load files with virus content, placing objectionable or excessive feedback or comments on any other users portefólio and any other behaviour deemed to be nuisance or offensive by the Site Administrator.</p>
+<p>Comportamento inapropriado incluí  o uso indevido do sistema de denúncia de material objetável, envio intencional de conteúdos com vírus, colocação de feedback objetável ou excessivo ou comentários no portefólio de outros utilizadores e qualquer outro comportamento considerado como incómodo ou ofensivo pelo Administrador do Site.</p>
 
-<p>Any unsolicited contact you receive as a result of personal information you have publicly released via your portefólio is your responsibility, however any misconduct in behaviour from users of the system should be reported to the <a href="contact.php">Site Administrator</a> immediately.  We may occasionally make minor adjustments to our Terms and Condition to reflect changes to the system and in response to user feedback.  As such we suggest you check the Terms and Conditions each time you visit this site.  We will however notify users of any major changes to the Terms and Conditions via the [Mahara] homepage.</p>';
-
+<p>Qualquer contacto não solicitado que receba como resultado de informação pessoal que  divulgou publicamente através do seu portefólio é da sua responsabilidade, no entanto qualquer conduta imprópria no comportamento de utilizadores do sistema deverá ser reportado ao <a href="contact.php">Administrador do Site</a> imediatamente. Ocasionalmente poderemos efetuar pequenos ajustes aos nossos Termos e Condições de forma a refletir mudanças no sistema e em resposta a feedback dos utilizadores. Como tal sugerimos que verifique os Termos e Condições de cada vez que visitar o este site. Iremos, no entanto notificar os utilizadores de quaisquer grandes alterações aos Termos e Condições através da página de entrada do [Mahara].</p>';
 $string['uploadcopyrightdefaultcontent'] = 'Sim: O ficheiro que está a tentar enviar é seu ou tem autorização para reproduzir e/ou distribuir este item. O meu uso deste ficheiro não quebra nenhuma lei local de Direitos de Autor. Este ficheiro também obedece aos Termos e Condições deste site.';
-
-?>

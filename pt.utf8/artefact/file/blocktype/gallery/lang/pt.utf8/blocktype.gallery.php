@@ -1,41 +1,42 @@
 <?php
-/**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * @package    mahara
- * @subpackage pt.utf8
- * @author     Direcção de Serviços de Tecnologias Educativas
- * @author     Emanuel Garcês & Rosa Silva
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
- *
- */
 
 defined('INTERNAL') || die();
 
-$string['title'] = 'Galeria de imagens';
+$string['Photo'] = 'Foto';
+$string['by'] = 'por';
+$string['cannotdisplayslideshow'] = 'Não é possível exibir apresentação';
 $string['description'] = 'Uma coleção de imagens da sua área de ficheiros';
-
+$string['externalgalleryurl'] = 'Endereço ou RSS da Galeria';
+$string['externalgalleryurldesc'] = 'Pode incorporar as seguintes galerias externas';
+$string['externalnotsupported'] = 'O endereço externo que forneceu não é suportado';
+$string['flickrapikey'] = 'Chave API do Flickr';
+$string['flickrapikeydesc'] = 'Para mostrar álbuns do Flcikr, necessita de uma chave API do Flickr. <a href="http://www.flickr.com/services/api/keys/apply/" target="_blank">Peça a sua chave online</a>.';
+$string['flickrsets'] = 'Álbuns do Flickr';
+$string['flickrsettings'] = 'Definições do Flickr';
+$string['gallerysettings'] = 'Definições da Galeria';
+$string['panoramiocopyright'] = 'Fotos providenciadas pelo Panoramio estão sujeitas a direitos de autor dos seus proprietários';
+$string['panoramiouserphotos'] = 'Fotos do utilizador do Panoramio';
+$string['pbapikey'] = 'Chave API do Photobucket';
+$string['pbapikeydesc'] = 'Para mostrar álbuns de fotografias do Photobucket, irá precisar de uma chave válida e uma chave privada API. <br> Vá ao <a href="http://developer.photobucket.com/" target="_blanck">Photobucket developer wesite</a>, concorde com os termos de serviço, inscreva-se e obtenha as chaves API.';
+$string['pbapiprivatekey'] = 'Chave privada para o API Photobucket';
+$string['pbsettings'] = 'Definições do Photobucket';
+$string['photobucketphotosandalbums'] = 'Fotos e albuns do utilizador do Photobucket';
+$string['photoframe'] = 'Utilizar moldura na fotografia?';
+$string['photoframedesc'] = 'Se a função estiver activada, uma moldura surgirá em torno da miniatura de cada imagem do álbum.';
+$string['picasaalbums'] = 'Álbuns Picasa';
+$string['previewwidth'] = 'Largura máxima da foto';
+$string['previewwidthdesc'] = 'Defina a largura máxima a que as fotos serão redimensionadas quando visualizadas com a Slimbox2.';
 $string['select'] = 'Seleccção de imagens';
+$string['selectexternal'] = 'Exibir imagens de uma galeria externa';
 $string['selectfolder'] = 'Mostrar todas as imagens de uma das minhas pastas (irá incluir imagens que sejam enviadas mais tarde)';
 $string['selectimages'] = 'Escolherei imagens individuais para mostrar';
+$string['style'] = 'Estilo';
+$string['styleslideshow'] = 'Apresentação';
+$string['stylesquares'] = 'Miniaturas de imagens (em quadrado)';
+$string['stylethumbs'] = 'Miniaturas';
+$string['title'] = 'Galeria de imagens';
+$string['useslimbox2'] = 'Utilizar Slimbox 2?';
+$string['useslimbox2desc'] = 'Slimbox 2 (clone visual da Lightbox 2) é  um script simples e discreto utilizado para sobrepor imagens na página atual';
 $string['width'] = 'LArgura';
 $string['widthdescription'] = 'Especifique a largura para as suas imagens (em pixels). A imagem será redimensionada para essa largura.';
-$string['style'] = 'Estilo';
-$string['stylethumbs'] = 'Miniaturas';
-$string['styleslideshow'] = 'Apresentação';
+$string['windowslivephotoalbums'] = 'Albuns de uma galeria de fotos do Windows Live';

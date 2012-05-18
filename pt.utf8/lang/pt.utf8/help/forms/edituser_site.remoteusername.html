@@ -1,0 +1,16 @@
+<h3>Nome de utilizador para autenticação externa</h3>
+<p>Quando o utilizador autentica-se através de um serviço externo ao Mahara,
+este campo contém o identificador do utilizador no serviço remoto.
+É possível que um utilizador tenha vários nomes de utilizador remotos armazenados no
+Mahara, mas cada um deverá estar associado um método de autenticação externa diferente.</p>
+<p>As regras atuais para a atualização deste campo são as seguintes:</p>
+<ul>
+  <li>Se limpar os conteúdos deste campo e submeter as suas alterações, qualquer nome de utilizador externo
+associado a este utilizar e método de autenticação selecionada será eliminada.</li>
+  <li>Se atualizar os conteúdos deste campo para algo diferente do padrão,
+ o nome de utilizador externo será apagado, ou um novo será criado se ainda não existir.</li>
+  <li>Se deixar os conteúdos deste campo nos valores por omissão e submeter,
+ um novo nome de utilizador externo será criado se ainda não existir um. 
+No entanto, se o utilizador já possui um nome de utilizador externo para o método de autenticação
+selecionado e este é diferente do valor por omissão ele não será sobrescrito.</li>
+</ul>

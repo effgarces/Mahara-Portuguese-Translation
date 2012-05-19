@@ -785,7 +785,7 @@ $string['primaryemailinvalid'] = 'O endereço de correio eletrónico primário �
 $string['privacystatement'] = 'Política de privacidade';
 $string['processing'] = 'Processando';
 $string['profile'] = 'perfil';
-$string['profiledescription'] = 'O seu perfil é o que os utilizadores verão quando clicarem no seu nome ou na foto do seu perfil. <br><br>URL para acesso rápido ao seu perfil:';
+$string['profiledescription'] = 'O seu perfil é o que os utilizadores verão quando clicarem no seu nome ou na foto do seu perfil.';
 $string['profileimage'] = 'Imagem de Perfil';
 $string['publishablog'] = 'Publicar um <a href="%s">Diário</a>';
 $string['pwchangerequestsent'] = 'Irá receber em breve uma mensagem de correio eletrónico com uma hiperligação que pode usar para alterar a senha para a sua conta';
